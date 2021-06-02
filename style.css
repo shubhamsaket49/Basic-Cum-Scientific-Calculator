@@ -1,6 +1,6 @@
 body {
   background: linear-gradient(to right, #85D8CE, #085078);
-background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.5)) ,url('cal.jpg');
+background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)) ,url('cal.jpg');
 }
 
 #app {
