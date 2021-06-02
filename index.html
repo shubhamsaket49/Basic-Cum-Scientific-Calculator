@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Scientific Calculator </title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel="stylesheet" href="style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+
+</head>
+<body>
+
+<div id="app">
+  <div class="calculator">
+    <button @click="changeModeEvent" class="toggle-button">
+      <p v-if="changeMode">Show Advanced Mode &nbsp; &nbsp; &#9864;</p>
+      <p v-else>Show Basic Mode &nbsp; &nbsp; &#9862;</p>
+    </button>
+    <div class="results">
+      <input class="input" v-model="current" />
+    </div>
+    <div class="mode" v-if="changeMode">
+      <table>
+                
+                <tr>
+	        <td>  <button class="button number-sign" @click="press">7</button></td>
+     	       <td> <button class="button number-sign" @click="press">8</button></td>
+      	       <td><button class="button number-sign" @click="press">9</button></td>
+                  <td><button class="button" @click="press">%</button></td>
+	      <td><button class="button clear-sign" @click="press">C</button></td>
+	   <td><button class="button clear-sign" @click="press">del</button></td>
+                </tr>
+                <tr>
+	      <td> <button class="button number-sign" @click="press">4</button></td>
+      	       <td><button class="button number-sign" @click="press">5</button></td>
+                  <td><button class="button number-sign" @click="press">6</button></td>
+	      <td><button class="button" @click="press">*</button></td>
+	    <td><button class="button" @click="press">)</button></td>
+	<td> <button class="button" @click="press">x ²</button></td>
+                </tr>
+                <tr>
+	        <<td> <button class="button number-sign" @click="press">1</button></td>
+      	       <td><button class="button number-sign" @click="press">2</button></td>
+                  <td><button class="button number-sign" @click="press">3</button></td>
+	      <td><button class="button" @click="press">-</button></td>
+		<td><button class="button" @click="press">(</button></td>
+	<td><button class="button" @click="press">√</button></td>
+                </tr>
+            <td> <button class="button zero-sign" @click="press">0</button></td>
+      	       <td><button class="button" @click="press">.</button></td>
+                  <td><button class="button" @click="press">/</button></td>
+	      <td><button class="button" @click="press">+</button></td>
+	  <td> <button class="button equal-sign" @click="press">=</button></td>
+              
+          </tr>
+            </table>
+    </div>
+    <div class="mode" v-else>
+  <tr>
+	         <td> <button class="button" @click="press">ln</button></td>
+	         <td><button class="button" @click="press">log</button></td>
+                    <td><button class="button" @click="press">(</button></td>
+                    <td><button class="button" @click="press">)</button></td>
+                    <td><button class="button" @click="press">∘</button></td>
+                    <td><button class="button" @click="press">e</button></td>
+  </tr>
+    <tr>
+	      <td><button class="button" @click="press">%</button></td>
+	        <td><button class="button" @click="press">sin</button></td>
+                   <td>  <button class="button number-sign" @click="press">7</button></td>
+     	       <td> <button class="button number-sign" @click="press">8</button></td>
+      	       <td><button class="button number-sign" @click="press">9</button></td>
+                  <td><button class="button" @click="press">±</button></td>
+  </tr>
+
+<tr>
+		<td><button class="button" @click="press">/</button></td>
+	        <td><button class="button" @click="press">*</button></td>
+                   <td>  <button class="button" @click="press">cos</button></td>
+     	       <td> <button class="button number-sign" @click="press">4</button></td>
+      	       <td><button class="button number-sign" @click="press">5</button></td>
+                  <td><button class="button number-sign" @click="press">6</button></td>
+  </tr>
+  <tr>
+	      <td> <button class="button" @click="press">x ²</button></td>
+	        <td><button class="button" @click="press">x^</button></td>
+                   <td>  <button class="button" @click="press">-</button></td>
+     	       <td> <button class="button" @click="press">tan</button></td>
+      	       <td><button class="button number-sign" @click="press">1</button></td>
+                  <td><button class="button number-sign" @click="press">2</button></td>
+  </tr>
+<tr>
+	      <td> <button class="button number-sign" @click="press">3</button></td>
+	        <td><button class="button" @click="press">√</button></td>
+                   <td>   <button class="button" @click="press">x !</button></td>
+      	       <td> <button class="button" @click="press">+</button></td>
+                  <td> <button class="button equal-sign" @click="press">=</button></td>
+  </tr>
+<tr>
+	      <td> <button class="button zero-sign" @click="press">0</button></td>
+	        <td><button class="button" @click="press">.</button></td>
+ 	        <td><button class="button" @click="press">π</button></td>
+	   <td><button class="button clear-sign" @click="press">del</button></td>
+      	      <td><button class="button clear-sign" @click="press">C</button></td>
+                 
+  </tr>
+      <font size ="15" face ="verdana" color ="green">
+<P>  <i>Developed By <b>Shubham Saket</b></i></p>
+    </div>
+  </div>
+</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.3.4/vue.min.js'></script><script  src="script.js"></script>
+</body>
+</html>
